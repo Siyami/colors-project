@@ -1,10 +1,14 @@
-<div *ngFor="let color of displayArr" [style.backgroundColor]="color.hexString" class="card">
-    <!-- <img src="img_avatar2.png" alt="Avatar" style="width:100%"> -->
-    <div class="container">
-
-        <p>{{color.hexString}}</p>
+<div class="row">
+    <div *ngFor="let color of displayArr" class="card">
+        <!-- <img src="img_avatar2.png" alt="Avatar" style="width:100%"> -->
+        <div [style.backgroundColor]="color.hexString" class="color"></div>
+        <div class="container">
+            <p class="color-name">{{color.hexString}}</p>
+        </div>
     </div>
 </div>
-<ol>
-    <li *ngFor="let number of pageArr" id="pagination" (click)="changePage(number)">{{number}}</li>
-</ol>
+<div class="row">
+    <ol id="page-nums">
+        <li *ngFor="let number of pageArr" id="pagination" (click)="changePage(number)">{{number}}</li>
+    </ol>
+</div>

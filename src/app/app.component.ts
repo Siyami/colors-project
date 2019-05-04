@@ -9,11 +9,16 @@ import { ColorsService } from './services/colors.service';
 export class AppComponent {
 
   constructor(
-
+    private _colorService: ColorsService
   ) {}   
 
   ngOnInit() {   
       
+  }
+
+  pickRandColor() {
+    let randColorArr = this._colorService.pickRandomColor();
+    sessionStorage.setItem('randColorArr', JSON.stringify(randColorArr));
   }
 
 }

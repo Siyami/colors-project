@@ -11,19 +11,17 @@ export class ListColorsComponent implements OnInit {
   displayArr: Array<object>;
   totalPageNumbers: number;
   pageArr = [];
-  
+
   constructor(
     private _colorsService: ColorsService
   ) { }
 
   ngOnInit() {
-   
     this.colorsData = this._colorsService.getColors();
     this.totalPageNumbers = Math.ceil(this.colorsData.length / 12);
     for (let i = 1; i < this.totalPageNumbers + 1; i++) {
       this.pageArr.push(i);
     }
-    debugger
     this.changePage(1);    
   }
 
@@ -36,5 +34,4 @@ export class ListColorsComponent implements OnInit {
       this.displayArr.push(this.colorsData[i]);
     }
   }
-
 }

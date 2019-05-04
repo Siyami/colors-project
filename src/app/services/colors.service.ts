@@ -3784,72 +3784,76 @@ export class ColorsService {
         "l": 77
       },
       "name": "Grey78"
-    },
-    {
-      "colorId": 252,
-      "hexString": "#d0d0d0",
-      "rgb": {
-        "r": 208,
-        "g": 208,
-        "b": 208
-      },
-      "hsl": {
-        "h": 0,
-        "s": 0,
-        "l": 81
-      },
-      "name": "Grey82"
-    },
-    {
-      "colorId": 253,
-      "hexString": "#dadada",
-      "rgb": {
-        "r": 218,
-        "g": 218,
-        "b": 218
-      },
-      "hsl": {
-        "h": 0,
-        "s": 0,
-        "l": 85
-      },
-      "name": "Grey85"
-    },
-    {
-      "colorId": 254,
-      "hexString": "#e4e4e4",
-      "rgb": {
-        "r": 228,
-        "g": 228,
-        "b": 228
-      },
-      "hsl": {
-        "h": 0,
-        "s": 0,
-        "l": 89
-      },
-      "name": "Grey89"
-    },
-    {
-      "colorId": 255,
-      "hexString": "#eeeeee",
-      "rgb": {
-        "r": 238,
-        "g": 238,
-        "b": 238
-      },
-      "hsl": {
-        "h": 0,
-        "s": 0,
-        "l": 93
-      },
-      "name": "Grey93"
     }
   ]
+
+  randomColorsArr = [
+    [
+      '#DC143C',
+      '#CD5C5C',
+      '#F08080',
+      '#E9967A',
+      '#FA8072'
+    ],
+    [
+      '#ffa500',
+      '#ffae19',
+      '#ffb732',
+      '#ffc04c',
+      '#ffc966'
+    ],
+    [
+      '#ffff00',
+      '#ffff19',
+      '#ffff32',
+      '#ffff4c',
+      '#ffff66'
+    ],
+    [
+      '#008000',
+      '#198c19',
+      '#329932',
+      '#4ca64c',
+      '#66b266'
+    ],
+    [
+      '#0000ff',
+      '#1919ff',
+      '#3232ff',
+      '#4c4cff',
+      '#6666ff',
+    ],
+    [
+      '#800080',
+      '#8c198c',
+      '#993299',
+      '#a64ca6',
+      '#b266b2'
+    ],
+    [
+      '#a52a2a',
+      '#ae3f3f',
+      '#b75454',
+      '#c06969',
+      '#c97f7f'
+    ],
+    [
+      '#808080',
+      '#8c8c8c',
+      '#999999',
+      '#a6a6a6',
+      '#b2b2b2',
+    ]
+  ];
 
   constructor() { }
 
   getColors() {
     return this.colorsArray;
+  }
+
+  pickRandomColor() {
+    let randNumber = Math.floor(Math.random() * 8);
+    return this.randomColorsArr[randNumber];
   }
 }
