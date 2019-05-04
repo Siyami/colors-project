@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ListColorsComponent } from './components/list-colors/list-colors.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'list', component: ListColorsComponent },
+  { path: '', redirectTo: 'list', pathMatch: 'full' },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

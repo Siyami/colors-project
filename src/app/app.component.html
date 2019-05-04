@@ -27,16 +27,7 @@
             </div>
         </nav>
         <main id="main" role="main" class="ml-sm-auto col-md-10 pt-3 px-4" style="padding-left: 0px; height: calc(100vh - 60px); overflow-y: auto;">
-            <div *ngFor="let color of displayArr" [style.backgroundColor]="color.hexString" class="card">
-                <!-- <img src="img_avatar2.png" alt="Avatar" style="width:100%"> -->
-                <div class="container">
 
-                    <p>{{color.hexString}}</p>
-                </div>
-            </div>
-            <ol>
-                <li *ngFor="let number of pageArr" id="pagination" (click)="changePage(number)">{{number}}</li>
-            </ol>
             <router-outlet></router-outlet>
         </main>
 
