@@ -33,5 +33,20 @@ export class ListColorsComponent implements OnInit {
       if(!this.colorsData[i]) break;
       this.displayArr.push(this.colorsData[i]);
     }
+    
+  }
+  underline(num, arr) {
+    let id = 'p' + num.toString(); 
+    let p = document.getElementById(id);
+    for(let i = 0; i < arr.length; i++) {
+      let newId = 'p' + (i + 1).toString();
+      let newP = document.getElementById(newId);
+      newP.style.textDecoration = 'none';
+      newP.style.fontWeight = 'normal';
+      newP.style.color = 'black';
+    }
+    p.style.textDecoration = 'underline';
+    p.style.fontWeight ='bolder';
+    p.style.color = 'green';   
   }
 }
