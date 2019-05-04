@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ColorsService } from './services/colors.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'colors';
+  colorsData: Array<string>;
+  constructor(
+    private _colorsService: ColorsService
+  ) {}   
+
+  ngOnInit() {
+    this.colorsData = this._colorsService.getColors();
+  }
 }
