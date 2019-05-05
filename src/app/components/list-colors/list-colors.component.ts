@@ -24,7 +24,6 @@ export class ListColorsComponent implements OnInit {
     }
     this.changePage(1);    
   }
-
   changePage(number) {
     this.displayArr = [];
     let end = number * 12;
@@ -32,8 +31,7 @@ export class ListColorsComponent implements OnInit {
     for(let i = start; i < end; i++) {
       if(!this.colorsData[i]) break;
       this.displayArr.push(this.colorsData[i]);
-    }
-    
+    }   
   }
   underline(num, arr) {
     let id = 'p' + num.toString(); 

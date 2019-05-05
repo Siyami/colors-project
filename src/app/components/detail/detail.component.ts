@@ -18,7 +18,6 @@ export class DetailComponent implements OnInit, DoCheck {
   ngOnInit() {
     this.randomColors = JSON.parse(sessionStorage.getItem('randColorArr'));
     this.pickedColor = this.randomColors[0];
-    //this.switch = true;
   }
 
   switchColor(color) {
@@ -33,8 +32,6 @@ export class DetailComponent implements OnInit, DoCheck {
       this.pickedColor = this.pickedColor;
       this.switch = false;
     }
-    //////////////////////////////
-    
   } 
 
 }

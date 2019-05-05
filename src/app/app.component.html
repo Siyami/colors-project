@@ -7,11 +7,10 @@
         </li>
     </ul>
 </nav>
-
 <div class="container-fluid">
     <div class="row">
         <!-- Side Nav -->
-        <nav id="sidenav" class="col-md-2 d-none d-md-block sidebar" style="height: calc(100vh - 60px); overflow-y: auto;">
+        <nav id="sidenav" class="col-md-2 d-md-block sidebar" style="height: calc(100vh - 60px); overflow-y: auto;">
             <div class="sidebar-sticky" id="sideview">
                 <button (click)="pickRandColor()" [routerLink]="['detail']" class="btn btn-light side-btn">Random Color</button>
                 <ul class="nav flex-column">
@@ -27,9 +26,7 @@
             </div>
         </nav>
         <main id="main" role="main" class="ml-sm-auto col-md-10 pt-3 px-4" style="padding-left: 0px; height: calc(100vh - 60px); overflow-y: auto;">
-
             <router-outlet></router-outlet>
         </main>
-
     </div>
 </div>

@@ -66,7 +66,7 @@ div.color {
 }
 
 #display {
-    margin-top: 20px;
+    margin-left: 50px;
 }
 
 #sideview {
@@ -112,6 +112,6 @@ input::placeholder {
 }
 
 #color-detail-view {
-    height: 450px;
+    height: 400px;
     padding: 0;
 }
