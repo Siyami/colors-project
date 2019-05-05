@@ -21,8 +21,9 @@ export class AppComponent {
     sessionStorage.setItem('randColorArr', JSON.stringify(randColorArr));
   }
 
-  // saveColor(index) {
-  //   this.randomColors = JSON.parse(sessionStorage.getItem('randColorArr'));
-  //   this.pickedColor = this.randomColors[0];
-  // }
+  debugger
+  saveColor(index) {
+    let randColorArr = this._colorService.getRandColorArr()[index];
+    sessionStorage.setItem('randColorArr', JSON.stringify(randColorArr));
+  }
 }
